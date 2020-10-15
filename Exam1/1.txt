@@ -1,0 +1,20 @@
+Exam 1
+-----------
+1.SELECT staffs.name as staff_name FROM staffs
+2.SELECT staffs.name as staff_name FROM staffs
+3.SELECT * FROM staffs ORDER BY name
+4.SELECT * FROM staffs ORDER BY name,department_id
+5.SELECT * FROM staffs WHERE name="Kay Thwe",SELECT * FROM staffs WHERE name="Thae Su Wai"
+6.SELECT staffs.deparment as Admin FROM staffs
+7.SELECT * FROM staffs WHERE name LIKE"a%"
+8.SELECT * FROM staffs WHERE name LIKE"%a"
+9.SELECT * FROM staffs WHERE salary BETWEEN 1000000 AND 500000
+10.SELECT * FROM staffs WHERE joindate=2014
+11.SELECT * FROM departments WHERE name="admin"
+12.SELECT * FROM departments WHERE name="Manager",SELECT * FROM departments WHERE name="Asst.Manager",
+13.SELECT * FROM staffs LIMIT 5
+14.SELECT MAX(salary)as total FROM 'staffs'
+15.SELECT SUM(salary)as total FROM 'staffs'
+16.------
+17.------
+#End

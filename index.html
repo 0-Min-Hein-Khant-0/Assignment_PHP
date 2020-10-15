@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+		//alert("OK");
+		$("#registerform").show();
+		$("#updateform").hide();
+
+
+		$("#btnsave").click(function(){
+
+			//alert("OK");
+		})
+
+		$("#btnedit").click(function(){
+
+			//alert("Hello");
+
+		$("#registerform").hide();
+		$("#updateform").show();
+
+
+
+
+
+		})
+		})
+	</script>
+</head>
+<body>
+
+
+
+
+
+
+
+  <div class="container form-group" id="registerform">
+  	<h1 class="text-center text-info py-5">Add New Student</h1>
+  	<form>
+  	<label for="file_id">Profile</label>
+    <input type="file" class="form-control-file" id="file_id">
+
+    <br>
+
+    <label for="name_id">Name</label>
+    <input type="text" class="form-control" id="name_id" placeholder="Enter Name">
+
+    <br>
+
+    <label for="email_id">Email address</label>
+    <input type="email" class="form-control" id="email_id" aria-describedby="emailHelp" placeholder="Enter Email">
+
+    <br>
+
+    <label class="d-block">Gender</label>
+    <input class="form-check-inline" type="radio" name="gender" id="male_id" value="option1" checked>
+    <label class="form-check-label" for="male_id">
+    Male
+    </label>
+
+    <br>
+
+    <input class="form-check-inline" type="radio" name="gender" id="female_id" value="option2">
+    <label class="form-check-label" for="female_id">
+    Female
+    </label>
+
+    <br><br>
+
+    <label for="exampleFormControlTextarea1">Address</label>
+    <textarea class="form-control" id="address_id" rows="3"></textarea>
+  
+  	<br>
+
+  	<button type="submit" class="btn btn-primary" id="btnsave">Save</button>
+  
+</form>
+	
+</div>
+
+
+
+<div class="container form-group" id="updateform">
+	<h1 class="text-center text-info">Edit Exiting Student</h1>
+	<form>
+  	<label for="file_id">Profile</label>
+    <input type="file" class="form-control-file" id="file_id">
+
+    <br>
+
+    <label for="name_id">Name</label>
+    <input type="text" class="form-control" id="name_id" placeholder="Enter Name">
+
+    <br>
+
+    <label for="email_id">Email address</label>
+    <input type="email" class="form-control" id="email_id" aria-describedby="emailHelp" placeholder="Enter Email">
+
+    <br>
+
+    <label class="d-block">Gender</label>
+    <input class="form-check-inline" type="radio" name="gender" id="male_id" value="male" checked>
+    <label class="form-check-label" for="male_id">
+    Male
+    </label>
+
+    <br>
+
+    <input class="form-check-inline" type="radio" name="gender" id="female_id" value="female">
+    <label class="form-check-label" for="female_id">
+    Female
+    </label>
+
+    <br><br>
+
+    <label for="exampleFormControlTextarea1">Address</label>
+    <textarea class="form-control" id="address_id" rows="3"></textarea>
+  
+  	<br>
+
+  	<button type="submit" class="btn btn-primary" id="btnupdate">Update</button>
+  
+</form>
+	
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>1</td>
+      <td>Min Hein Khant</td>
+      <td>Male</td>
+      <td>0minheinkhant0@gmail.com</td>
+      <td>
+      	<button type="button" class="btn btn-success">Detail</button>
+      	<button type="button" class="btn btn-warning" id="btnedit">Edit</button>
+      	<button type="button" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

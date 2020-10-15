@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style type="text/css">
+		p
+		{
+			margin-top: 20px;
+			margin-left: 10px;
+			padding: 5px;
+			border:2px solid #666;
+		}
+
+	</style>
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				
+				$("p").animate({left:'250px'});
+
+
+			})
+		})
+	</script>
+</head>
+<body>
+<p>Min Hein Khant</p>
+
+<button id="btn">Click</button>
+</body>
+</html>

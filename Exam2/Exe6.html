@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	
+
+
+
+		function sum()
+		{
+			let n1 = parseInt(document.myForm.num1.value);
+			let n2 =parseInt(document.myForm.num2.value);
+			let n3 =parseInt(document.myForm.num3.value);
+			let sum = 703*n3/n2*n2*2*n1;
+			document.myForm.result.value = sum;
+			
+
+		}
+		if(sum<1.85){
+			alert('Underweight');
+		}
+		else if(18.5<sum<25){
+			alert('Normalweight');
+
+
+		}
+		else if(18.5<sum<25){
+			alert('Overweight');
+
+		}
+		else
+		{
+			alert('Obesity');
+		}
+		
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body align="center">
+<div class="container">
+	<h1>Calculator</h1>
+	<br><br>
+	<form name="myForm">
+		<label style="font-size: 25px;">Your Height:</label>
+		<input type="number" name="num1" placeholder="feet" class="feet">
+		<input type="number" name="num2" placeholder="inches" class="inches">
+		<br><br>
+	<div class="all_1">
+		<label style="font-size: 25px;margin-left: -20px;">Your Weight:</label>
+		<input type="number" name="num3" class="weight" placeholder="pounds">
+		<br><br>
+		<label style="font-size: 25px; margin-right: 8px;">Result</label>
+		<input type="number" name="result" readonly="" class="result">
+	</div>
+		<br><br>
+		<button onclick="sum()" type="button" class="btn">Calculate</button>
+
+	</form>
+</div>
+</body>
+</html>

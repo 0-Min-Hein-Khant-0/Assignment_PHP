@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <title> Shopules </title>
         
         <meta charset="utf-8">
@@ -22,18 +21,15 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-
         <!-- iconfont CSS -->
         <link rel="stylesheet" type="text/css" href="icon/icofont/icofont.min.css">
         <!-- Boxicon CSS -->
         <link rel="stylesheet" type="text/css" href="icon/boxicons-master/css/boxicons.min.css">
-
         <!-- Main CSS-->
         <link rel="stylesheet" type="text/css" href="backend/css/main.css">
     </head>
     
     <body class="app sidebar-mini">
-
         <!-- Navbar-->
         <header class="app-header">
             <a class="app-header__logo" href="index.html">
@@ -54,7 +50,6 @@
                         <i class="icofont-search-2"></i>
                     </button>
                 </li>
-
                 <!-- User Menu-->
                 <li class="dropdown">
                     <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu">
@@ -76,11 +71,8 @@
                 </li>
             </ul>
         </header>
-
-
         <!-- Sidebar menu-->
         <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-
         <aside class="app-sidebar">
             <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
                 <div>
@@ -99,34 +91,30 @@
                         </span>
                     </a>
                 </li>
-
                 <li>
-                    <a class="app-menu__item" href="dashboard.html">
+                    <a class="app-menu__item" href="order_list.php">
                         <i class="app-menu__icon icofont-prestashop"></i>
                         <span class="app-menu__label">
                             Order
                         </span>
                     </a>
                 </li>
-
                 <li>
-                    <a class="app-menu__item" href="dashboard.html">
+                    <a class="app-menu__item" href="user_list.php">
                         <i class="app-menu__icon icofont-users-social"></i>
                         <span class="app-menu__label">
                             Customer
                         </span>
                     </a>
                 </li>
-
                 <li>
-                    <a class="app-menu__item" href="dashboard.html">
+                    <a class="app-menu__item" href="brand_list.php">
                         <i class="app-menu__icon icofont-ui-tag"></i>
                         <span class="app-menu__label">
                             Brands 
                         </span>
                     </a>
                 </li>
-
                 <li>
                     <a class="app-menu__item" href="item_list.php">
                         <i class="app-menu__icon icofont-package"></i>
@@ -135,7 +123,6 @@
                         </span>
                     </a>
                 </li>
-
                 <li>
                     <a class="app-menu__item" href="subcategory_list.php">
                         <i class="app-menu__icon icofont-tags"></i>
@@ -144,7 +131,6 @@
                         </span>
                     </a>
                 </li>
-
                 <li>
                     <a class="app-menu__item" href="category_list.php">
                         <i class="app-menu__icon icofont-tag"></i>
@@ -157,8 +143,4 @@
                 
             </ul>
         </aside>
-
-
         <main class="app-content">
-           
-        

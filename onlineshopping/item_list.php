@@ -1,12 +1,12 @@
- 
-<?php 
+<?php
 
-    require('backend_header.php');
-    require('db_connect.php');
- ?>
+require('backend_header.php');
+require('db_connect.php');
+
+?>
 
 
- <div class="app-title">
+            <div class="app-title">
                 <div>
                     <h1> <i class="icofont-list"></i> Item </h1>
                 </div>
@@ -32,32 +32,80 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                        <?php
+
+                                            $sql = "SELECT brands.name AS bname,
+                                                     items.name AS iname,
+                                                     items.price AS iprice,
+                                                     items.id AS iid,
+                                                     items.description AS idescription
+                                                     FROM brands 
+                                                     JOIN items 
+                                                     ON brands.id = items.brand_id";
+                                            $stmt = $conn->prepare($sql);
+
+                                            $stmt->execute();
+
+                                            $brand = $stmt->fetchAll();
+
+
+                                        //Start Fetch item table
+
+                                        $sql = "SELECT * FROM items";
+                                            $stmt = $conn->prepare($sql);
+
+                                            $stmt->execute();
+
+                                            $items = $stmt->fetchAll();
+
+                                            $i = 1;
+                                            foreach ($brand as $b) {
+                                                // $id = $category['id'];
+                                                $id = $b['iid'];
+                                                $brandname = $b['bname'];
+                                                $itemname = $b['iname'];
+                                                $itemprice = $b['iprice'];
+
+                                        ?>
+
                                         <tr>
-                                            <td> 1. </td>
-                                            <td> aaa </td>
-                                            <td>LUX</td>
-                                            <th>8000MMK</th>
+                                            <td> <?php echo $i++ ?>. </td>
+                                            <td> <?php echo $itemname ?> </td>
+                                            <td> <?php echo $brandname ?> </td>
+                                            <td> <?php echo $itemprice ?> </td>
                                             <td>
-                                                <a href="" class="btn btn-warning">
+                                                <a href="item_edit.php?iid=<?= $id ?>" class="btn btn-warning">
                                                     <i class="icofont-ui-settings"></i>
                                                 </a>
 
-                                                <a href="" class="btn btn-outline-danger">
-                                                    <i class="icofont-close"></i>
-                                                </a>
+                                                <form class="d-inline-block" onsubmit="return confirm('Are you sure want to delete?')" method="POST" action="item_delete.php">
+
+                                                    <input type="hidden" name="id" value="<?= $id ?>">
+
+                                                    <button class="btn btn-outline-danger">
+                                                        <i class="icofont-close"></i>
+                                                    </button>
+
+                                                </form>
                                             </td>
 
                                         </tr>
+
+                                    <?php } ?>
+
+
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-    
             </div>
 
- <?php 
 
-    require('backend_footer.php');
- ?>
+<?php
+
+require('backend_footer.php');
+
+?>

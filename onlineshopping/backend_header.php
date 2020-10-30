@@ -1,3 +1,17 @@
+<<?php 
+    session_start();
+
+    if(!isset($_SESSION['login_user'])){
+        header('location:login.php');
+    }
+
+    if(isset($_SESSION['login_user'])){
+        if ($_SESSION['login_user']['rname'] == "customer") {
+            header('location:index.php');
+        }
+    }
+   
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,6 +69,8 @@
                     <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu">
                         <i class="icofont-user-alt-3"></i>
                 </a>
+
+
                   <ul class="dropdown-menu settings-menu dropdown-menu-right">
                     <li>
                         <a class="dropdown-item" href="page-user.html">
@@ -62,29 +78,33 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="page-login.html">
+                        <a class="dropdown-item" href="login.php">
                             <i class="icofont-logout"></i>
                             Logout
                         </a>
                     </li>
                   </ul>
+
+
+
                 </li>
             </ul>
         </header>
         <!-- Sidebar menu-->
         <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+
         <aside class="app-sidebar">
             <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
                 <div>
-                  <p class="app-sidebar__user-name">John Doe</p>
-                  <p class="app-sidebar__user-designation">Frontend Developer</p>
+                  <p class="app-sidebar__user-name"><?= $_SESSION['login_user']['name']; ?> </p>
+                  <p class="app-sidebar__user-designation"> <?= $_SESSION['login_user']['rname']; ?> </p>
                 </div>
             </div>
             
             <ul class="app-menu">
                 
                 <li>
-                    <a class="app-menu__item" href="dashboard.html">
+                    <a class="app-menu__item" href="dashboard.php">
                         <i class="app-menu__icon icofont-dashboard"></i>
                         <span class="app-menu__label">
                             Dashboard
@@ -92,7 +112,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="app-menu__item" href="order_list.php">
+                    <a class="app-menu__item" href="orderlist.php">
                         <i class="app-menu__icon icofont-prestashop"></i>
                         <span class="app-menu__label">
                             Order
@@ -100,7 +120,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="app-menu__item" href="user_list.php">
+                    <a class="app-menu__item" href="customerlist.php">
                         <i class="app-menu__icon icofont-users-social"></i>
                         <span class="app-menu__label">
                             Customer
